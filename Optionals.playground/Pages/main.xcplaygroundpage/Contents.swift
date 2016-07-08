@@ -13,41 +13,26 @@
  ### 1. What is the type of the variable `pet` declared below?
  */
 var pet = "turtle 🐢"
-
-
-
-
-
-
+//String
 /*: question2
  ### 2. What is the type of the variable `petName` declared below?
  */
 var petName: String?
 
-
-
-
-
-
+//String optional!
 /*: question3
  ### 3. Currently, what is the _value_ of `petName`?
  */
 
-
-
-
-
-
+// Nil :(
 
 /*: question4
  ### 4. Give `petName` a value! Assign to it any string. What is its type now?
  */
 // write your code here
-
-
-
-
-
+petName = "Cooper"
+var dogName = petName
+// String optional
 
 
 /*: question5
@@ -55,8 +40,8 @@ var petName: String?
  */
 // write your code here
 
-
-
+print(petName)
+//Optional(Cooper) because it's wrapped in an optional
 
 
 
@@ -66,22 +51,19 @@ var petName: String?
  */
 // write your code here
 
-
-
-
-
-
+if petName != nil {
+    print(petName)
+} else {
+    print("There is no pet name.")
+}
 
 /*: question7
  ### 7. Use _optional binding_ to unwrap the value of `petName` and print it to the console without all the **Optional(...)** stuff around it.
  */
 // write your code here
-
-
-
-
-
-
+if let petName = petName {
+print(petName)
+}
 
 /*: question8
  ### 8. Write an if statement that will print out "The value of anotherPetName is nil" using the variable below
@@ -89,7 +71,9 @@ var petName: String?
 var anotherPetName: String?
 // write your code here
 
-
+if anotherPetName == nil {
+    print("The value of anotherPetName is nil")
+}
 
 
 
@@ -100,38 +84,26 @@ var anotherPetName: String?
  */
 // write your code here
 
-
-
-
-
-
-
-
-
+if anotherPetName == nil {
+    print("anotherPetName has no value")
+} else if let anotherPetName = anotherPetName {
+    print(anotherPetName)
+}
 /*: question10
  ### 10. Declare a _constant_ optional string (using the `let` keyword). Then try to assign a string value to it on the next line. Print out the constant. What happens?
  */
 // write your code here
-
-
-
-
-
-
-
-
-
+let petType : String?
+petName = "dog"
+print(petName)
+//
 /*: question11
  ### 11. Declare another _constant_ optional string, and set it to `nil` immediately. Then, on the next line, assign a string value to it. What happens?
  */
 // write your code here
 
-
-
-
-
-
-
-
+let theirPetType: String? = nil
+//theirPetType = "dog"
+// Error because theirPetType is a constant. Xcode wants me to change let to var
 
 //: Checkout the solution branch, git co solution and come back to this spot to see a link to the solution
